@@ -7,7 +7,6 @@ from rest_framework import serializers, status
 from rest_framework.exceptions import APIException
 from rest_framework.relations import SlugRelatedField
 from rest_framework.validators import UniqueTogetherValidator, UniqueValidator
-
 from reviews.models import Categories, Comment, Genres, Review, Title
 from users.models import User
 from users.tokens import ConfirmationCodeTokenGenerator
