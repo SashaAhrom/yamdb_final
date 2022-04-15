@@ -8,6 +8,6 @@ RUN pip3 install --upgrade pip
 
 RUN pip3 install -r /app/requirements.txt --no-cache-dir
 
-COPY yamdb_final/api_yamdb/ .
+COPY . .
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000"]
