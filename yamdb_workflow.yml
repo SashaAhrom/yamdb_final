@@ -41,8 +41,9 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
+          context: api_yamdb/
           push: true
-          tags: kart312502/web:latest
+          tags: kart312502/yamdb_final:latest
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
@@ -68,6 +69,7 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             sudo docker-compose up -d
+            sudo docker-compose exec -T web python manage.py collectstatic --no-input
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
