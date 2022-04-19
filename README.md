@@ -1,5 +1,5 @@
 # yamdb_final
 yamdb_final
 
-![Yamdb](https://github.com/SashaAhrom/yamdb_final/workflows/Yamdb/badge.svg)
+http://projectyatube.ddns.net/ Status server ![Yamdb](https://github.com/SashaAhrom/yamdb_final/workflows/Yamdb/badge.svg)
 
